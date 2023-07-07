@@ -26,6 +26,7 @@ class ST7789(object):
 
         #Initialize SPI
         self._spi = spidev.SpiDev(0, 0)
+        self._spi.mode = 3
         self._spi.max_speed_hz = 40000000
 
         self.init()
